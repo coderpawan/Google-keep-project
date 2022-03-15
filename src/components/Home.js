@@ -197,15 +197,15 @@ const Home = ({ state, styles, ...actions }) => {
           >
             <div class="page-link">{countthird}</div>
           </li>
-          {countthird <= state.notes_list.length / 6 ? (
-            <li class="page-item" onClick={Next} style={{ cursor: "pointer" }}>
-              <div class="page-link">Next</div>
-            </li>
-          ) : (
+          {countthird >= state.notes_list.length / 6 ? (
             <li class="page-item" style={{ cursor: "pointer" }}>
               <div class="page-link" style={{ color: "lightblue" }}>
                 Next
               </div>
+            </li>
+          ) : (
+            <li class="page-item" onClick={Next} style={{ cursor: "pointer" }}>
+              <div class="page-link">Next</div>
             </li>
           )}
         </ul>
