@@ -217,6 +217,10 @@ class App extends React.Component {
         display: "none",
       },
     };
+    const RemoveAll = (e) => {
+      localStorage.clear();
+      window.location.reload();
+    };
     return (
       <div>
         <div className="header">
@@ -242,6 +246,7 @@ class App extends React.Component {
                 data-rh="Remove All Notes"
                 className="nav-trash"
                 style={{ cursor: "pointer" }}
+                onClick={RemoveAll}
               >
                 <img alt="trash" className="trash" src={Delete} />
               </div>
